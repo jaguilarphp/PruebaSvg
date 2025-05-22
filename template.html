@@ -1,8 +1,22 @@
 <!DOCTYPE html>
 <html>
-<body>{
-    text-align: center; /* Centra el contenido inline/inline-block dentro del body */
+<head>
+<style>
+  body {
+    /* Opcional: Para asegurar que no hay margen o padding extra en el body */
+    margin: 0;
+    padding: 0;
+    /* Esto es útil si tienes otros elementos y quieres que el body no tenga un ancho fijo que impida el centrado del SVG */
   }
+
+  svg {
+    display: block; /* Muy importante para que margin: auto funcione */
+    margin: 0 auto; /* Centra el SVG horizontalmente en la página */
+    border: 1px solid red; /* Ayuda visual para ver los límites del SVG */
+  }
+</style>
+</head>
+<body>
 <svg width="600" height="880" xmlns="http://www.w3.org/2000/svg">
   <rect x="0" y="0" width="600" height="105" fill="#003a70" />
   <ellipse cx="300" cy="125" rx="350" ry="55" fill="#0070C0" />
